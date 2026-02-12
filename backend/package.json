@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/interfaces/http/server.ts",
-    "build": "tsc",
+    "build:tsc": "tsc",
     "db:migrate": "node-pg-migrate up",
     "test": "vitest"
   },
