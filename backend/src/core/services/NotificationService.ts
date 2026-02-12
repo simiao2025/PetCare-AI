@@ -1,5 +1,5 @@
-import { EvolutionApiClient } from '../infrastructure/whatsapp/EvolutionApiClient.js';
-import { MobileNotificationService } from '../infrastructure/mobile/MobileNotificationService.js';
+import { EvolutionApiClient } from '../../infrastructure/whatsapp/EvolutionApiClient.js';
+import { MobileNotificationService } from '../../infrastructure/mobile/MobileNotificationService.js';
 
 export class NotificationService {
   constructor(

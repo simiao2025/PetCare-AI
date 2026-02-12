@@ -1,5 +1,5 @@
 import { db } from '../database/connection.js';
-import { Appointment } from '../../core/entities.js';
+import { Appointment } from '../../core/entities/index.js';
 
 export class AppointmentRepository {
   async create(appointment: Omit<Appointment, 'id' | 'createdAt' | 'updatedAt'>): Promise<Appointment> {

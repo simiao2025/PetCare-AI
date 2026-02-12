@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { ClientRepository } from '../../infrastructure/repositories/ClientRepository.js';
+import { ClientRepository } from '../../../infrastructure/repositories/ClientRepository.js';
 import { z } from 'zod';
 
 const clientRepo = new ClientRepository();
