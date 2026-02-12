@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { AppointmentRepository } from '../../infrastructure/repositories/AppointmentRepository';
+import { AppointmentRepository } from '../../infrastructure/repositories/AppointmentRepository.js';
 import { z } from 'zod';
 
 const appointmentRepo = new AppointmentRepository();

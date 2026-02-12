@@ -1,4 +1,4 @@
-import { OpenAIService } from './OpenAIService';
+import { OpenAIService } from './OpenAIService.js';
 
 export class VeterinaryIntentClassifier {
   constructor(private openAI: OpenAIService) {}

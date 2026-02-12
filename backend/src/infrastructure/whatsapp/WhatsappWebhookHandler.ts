@@ -1,7 +1,7 @@
-import { FastifyInstance } from 'fastify';
-import { VeterinaryIntentClassifier } from '../ai/VeterinaryIntentClassifier';
-import { DialogStateManager } from '../ai/DialogStateManager';
-import { EvolutionApiClient } from './EvolutionApiClient';
+import { FastifyRequest } from 'fastify';
+import { VeterinaryIntentClassifier } from '../ai/VeterinaryIntentClassifier.js';
+import { DialogStateManager } from '../ai/DialogStateManager.js';
+import { EvolutionApiClient } from './EvolutionApiClient.js';
 
 export class WhatsappWebhookHandler {
   constructor(
@@ -10,7 +10,7 @@ export class WhatsappWebhookHandler {
     private whatsappClient: EvolutionApiClient
   ) {}
 
-  async handleWebhook(request: FastifyInstance['request']) {
+  async handleWebhook(request: FastifyRequest) {
     const body: any = request.body;
 
     // Validação básica do payload da Evolution API

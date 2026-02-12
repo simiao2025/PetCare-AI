@@ -1,5 +1,5 @@
-import { db } from '../database/connection';
-import { Client } from '../../core/entities';
+import { db } from '../database/connection.js';
+import { Client } from '../../core/entities.js';
 
 export class ClientRepository {
   async create(client: Omit<Client, 'id' | 'createdAt' | 'updatedAt'>): Promise<Client> {

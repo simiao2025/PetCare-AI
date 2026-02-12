@@ -1,5 +1,5 @@
-import { db } from '../database/connection';
-import { Appointment } from '../../core/entities';
+import { db } from '../database/connection.js';
+import { Appointment } from '../../core/entities.js';
 
 export class AppointmentRepository {
   async create(appointment: Omit<Appointment, 'id' | 'createdAt' | 'updatedAt'>): Promise<Appointment> {
@@ -34,7 +34,7 @@ export class AppointmentRepository {
       ORDER BY a.scheduled_at ASC
     `;
     const result = await db.query(query, [today, tomorrow]);
-    return result.rows.map(row => this.mapToEntity(row));
+    return result.rows.map((row: any) => this.mapToEntity(row));
   }
 
   private mapToEntity(row: any): Appointment {
