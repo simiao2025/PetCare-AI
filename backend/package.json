@@ -1,0 +1,30 @@
+{
+  "name": "petcare-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/interfaces/http/server.ts",
+    "build": "tsc",
+    "db:migrate": "node-pg-migrate up",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "fastify": "^4.26.0",
+    "pg": "^8.11.0",
+    "redis": "^4.6.13",
+    "zod": "^3.22.4",
+    "jsonwebtoken": "^9.0.2",
+    "helmet": "^7.1.0",
+    "pino": "^8.17.0",
+    "whatsapp-api-client": "^1.5.0",
+    "date-fns": "^3.3.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "node-pg-migrate": "^7.0.0",
+    "vitest": "^1.4.0",
+    "@types/node": "^20.11.0",
+    "@types/pg": "^8.11.0"
+  }
+}
