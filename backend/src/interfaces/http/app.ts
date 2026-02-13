@@ -15,25 +15,7 @@ import { appointmentRoutes } from './routes/appointments.js';
 
 // Logger Configuration (Pino)
 const app = fastify({
-  logger: {
-    transport: {
-      target: 'pino-pretty',
-      options: {
-        translateTime: 'HH:MM:ss Z',
-        ignore: 'pid,hostname',
-      },
-    },
-    serializers: {
-      req(request) {
-        return {
-          method: request.method,
-          url: request.url,
-          // Redact sensitive headers
-          headers: { ...request.headers, authorization: '[REDACTED]' }, 
-        };
-      },
-    },
-  },
+  logger: true,
   disableRequestLogging: false,
 });
 
